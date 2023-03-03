@@ -1,7 +1,39 @@
 # Importing doubly ended queue
 from collections import deque
 
+# Unoptimized solution 
+# go over every possible window for each n
+# until window end reaches end of array
+# Time: O(w(n - w))
+# Space: O(1)
 
+# Case Strictly increasing [1,2,3,4,5,6,7]:
+# initial window will need to pop w times so O(w)
+# after initial window pop only 1 time O(n - w)
+# 
+# Then: O(w + n - w) or O(n)
+#
+# Case Strictly decreasing [7,6,5,4,3,2,1]:
+# window size will always be maintained to be
+# the size of the window.
+# Then: O(n - w)
+# 
+# Case Constant [5,5,5,5]:
+# similar to strictly decreasing
+# Then: O(n - w) 
+#
+# Case Increasing and decreasing [5,6,3,4,2,5,4]:
+# Clean up cost of O(w)
+# can happen at n/w times
+# so w * (n/w)
+# Subtract n/w from n.  All cleanups means less iteration
+# over the entire array.
+# O(n - (n/w) + (n/w)w) -> O(n)
+# Then: O(n)
+# 
+# Case 
+# Time: O(n)
+# Space: O(w)
 def find_max_sliding_window(nums, window_size):
 
     result = []
