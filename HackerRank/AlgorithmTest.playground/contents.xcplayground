@@ -9,6 +9,6 @@
         <page name='BirthdayCakeCandles'/>
         <page name='timeConversion'/>
         <page name='roadNetwork'/>
-        <page name='BFS'/>
+        <page name='Sum'/>
     </pages>
 </playground>
