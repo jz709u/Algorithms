@@ -12,5 +12,6 @@
         <page name='Sum'/>
         <page name='Max'/>
         <page name='BinarySearch'/>
+        <page name='QuickSort'/>
     </pages>
 </playground>
