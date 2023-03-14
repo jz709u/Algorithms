@@ -4,7 +4,6 @@ import Foundation
 
 var greeting = "Hello, playground"
 
-//: [Next](@next)
 extension Array where Element == Int {
     func reverseBinarySearch(value: Int) -> Index {
         var low = endIndex
@@ -27,5 +26,8 @@ extension Array where Element == Int {
         return low
     }
 }
+
+//: [Next](@next)
+
 
 "]"

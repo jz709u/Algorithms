@@ -11,5 +11,6 @@
         <page name='roadNetwork'/>
         <page name='Sum'/>
         <page name='Max'/>
+        <page name='BinarySearch'/>
     </pages>
 </playground>
