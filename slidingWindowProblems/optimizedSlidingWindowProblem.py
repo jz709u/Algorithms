@@ -30,7 +30,7 @@ from collections import deque
 # over the entire array.
 # O(n - (n/w) + (n/w)w) -> O(n)
 # Then: O(n)
-# 
+#   
 # Case 
 # Time: O(n)
 # Space: O(w)
