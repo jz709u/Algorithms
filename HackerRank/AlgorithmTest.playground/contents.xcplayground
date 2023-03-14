@@ -10,5 +10,6 @@
         <page name='timeConversion'/>
         <page name='roadNetwork'/>
         <page name='Sum'/>
+        <page name='Max'/>
     </pages>
 </playground>
