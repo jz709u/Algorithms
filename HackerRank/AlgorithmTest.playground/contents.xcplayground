@@ -13,5 +13,6 @@
         <page name='Max'/>
         <page name='BinarySearch'/>
         <page name='QuickSort'/>
+        <page name='Dijkstras'/>
     </pages>
 </playground>
