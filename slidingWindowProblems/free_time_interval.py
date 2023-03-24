@@ -95,3 +95,30 @@ def employee_free_time(schedule):
         currentFree = intervals_intersection(currentFree, indexFree)
             
     return currentFree
+
+
+from interval import Interval
+
+# optimized O(n log n)
+
+def employee_free_time(schedule):
+    # Initializing two lists
+    ans = []
+    intervals = []
+
+    # Merging all the employee schedules into one list of intervals
+    for s in schedule:
+        intervals.extend(s)
+
+    # Sorting all intervals
+    intervals.sort(key=lambda x: x.start)
+    # Initializing prev_end as the endpoint of the first interval
+    prev_end = intervals[0].end
+    # iterating through the intervals and adding the gaps we find to the answer list
+    for interval in intervals:
+        if interval.start > prev_end:
+            ans.append(Interval(prev_end, interval.start))
+        # if the current interval's ending time is later than the current prev_end, update it
+        prev_end = max(prev_end, interval.end)
+    return ans
+
