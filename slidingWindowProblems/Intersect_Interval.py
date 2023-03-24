@@ -6,7 +6,19 @@ def intersect(interval1, interval2):
         return None
     return Interval(max(interval1.start, interval2.start), min(interval1.end, interval2.end))
 
+# Naive Approach:
+# for every item in a: find intersections for every interval of b
+# performance: O(a * b)
+# 
+#
 # Function to find the intersecting points between two intervals
+# Optimized Approach: O(a + b)
+# Space: O(a + b - 1)
+# we are going to traverse each list at the same time
+# moving forward the earlier one by one otherwise both until one of them hits the end
+# hitting the end on just one means we got to the point where the
+# rest of a that occur after b will not intersect so we can end early
+#
 def intervals_intersection(interval_list_a, interval_list_b):
     lenA = len(interval_list_a) 
     lenB = len(interval_list_b)
